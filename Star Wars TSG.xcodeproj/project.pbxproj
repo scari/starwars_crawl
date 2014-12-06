@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7814CF3F0CA9D96300329EE8 /* FilmCoFont.c in Sources */ = {isa = PBXBuildFile; fileRef = 7814CF3E0CA9D96300329EE8 /* FilmCoFont.c */; };
+		7814CF410CA9D97400329EE8 /* FilmCoFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 7814CF400CA9D97400329EE8 /* FilmCoFont.h */; };
+		7814CF430CA9D98300329EE8 /* FilmCo.c in Sources */ = {isa = PBXBuildFile; fileRef = 7814CF420CA9D98300329EE8 /* FilmCo.c */; };
+		7814CF450CA9D98C00329EE8 /* FilmCo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7814CF440CA9D98C00329EE8 /* FilmCo.h */; };
+		7814CFA80CA9DCA500329EE8 /* SequenceTimes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7814CFA70CA9DCA500329EE8 /* SequenceTimes.h */; };
+		781605DC0C9C53E000609567 /* Distributor.c in Sources */ = {isa = PBXBuildFile; fileRef = 781605DB0C9C53E000609567 /* Distributor.c */; };
+		781605DE0C9C53F100609567 /* DistributorFont.c in Sources */ = {isa = PBXBuildFile; fileRef = 781605DD0C9C53F100609567 /* DistributorFont.c */; };
+		781605E00C9C53FC00609567 /* DistributorSearchlights.c in Sources */ = {isa = PBXBuildFile; fileRef = 781605DF0C9C53FC00609567 /* DistributorSearchlights.c */; };
+		7826D9420E992EFC00B80AAD /* Font (Crawl).dat in Resources */ = {isa = PBXBuildFile; fileRef = 7826D93F0E992EFC00B80AAD /* Font (Crawl).dat */; };
+		7826D9430E992EFC00B80AAD /* Font (Intro).dat in Resources */ = {isa = PBXBuildFile; fileRef = 7826D9400E992EFC00B80AAD /* Font (Intro).dat */; };
+		7826D9440E992EFC00B80AAD /* Font (DistInfo).dat in Resources */ = {isa = PBXBuildFile; fileRef = 7826D9410E992EFC00B80AAD /* Font (DistInfo).dat */; };
+		782D2DF70CA0A6C6000761C1 /* SequenceTimes.c in Sources */ = {isa = PBXBuildFile; fileRef = 782D2DF60CA0A6C6000761C1 /* SequenceTimes.c */; };
+		7855DC180CB71DCC00BCA616 /* cbf functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 7855DC160CB71DCC00BCA616 /* cbf functions.c */; };
+		7855DC190CB71DCC00BCA616 /* cbf functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855DC170CB71DCC00BCA616 /* cbf functions.h */; };
+		7855DC1E0CB71E9800BCA616 /* image buffer functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 7855DC1C0CB71E9800BCA616 /* image buffer functions.c */; };
+		7855DC1F0CB71E9800BCA616 /* image buffer functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855DC1D0CB71E9800BCA616 /* image buffer functions.h */; };
+		7855DC220CB71EAE00BCA616 /* numeric functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 7855DC200CB71EAE00BCA616 /* numeric functions.c */; };
+		7855DC230CB71EAE00BCA616 /* numeric functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855DC210CB71EAE00BCA616 /* numeric functions.h */; };
+		7855DC280CB71EEA00BCA616 /* string functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 7855DC240CB71EEA00BCA616 /* string functions.c */; };
+		7855DC290CB71EEA00BCA616 /* string functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855DC250CB71EEA00BCA616 /* string functions.h */; };
+		7855DC2A0CB71EEA00BCA616 /* user interface functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 7855DC260CB71EEA00BCA616 /* user interface functions.c */; };
+		7855DC2B0CB71EEA00BCA616 /* user interface functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7855DC270CB71EEA00BCA616 /* user interface functions.h */; };
+		787274520C9C625B00044BF4 /* Distributor.h in Headers */ = {isa = PBXBuildFile; fileRef = 787274510C9C625B00044BF4 /* Distributor.h */; };
+		7872751B0C9C6E1500044BF4 /* bool.h in Headers */ = {isa = PBXBuildFile; fileRef = 7872751A0C9C6E1500044BF4 /* bool.h */; };
+		787275270C9C6F3C00044BF4 /* nil.h in Headers */ = {isa = PBXBuildFile; fileRef = 787275260C9C6F3C00044BF4 /* nil.h */; };
+		787D74D00C9F5D2C00FA6FA4 /* TitleFont.c in Sources */ = {isa = PBXBuildFile; fileRef = 787D74CF0C9F5D2C00FA6FA4 /* TitleFont.c */; };
+		788A5A340D4574C8005BE7C4 /* geometry functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 788A5A2A0D4574C8005BE7C4 /* geometry functions.c */; };
+		788A5A350D4574C8005BE7C4 /* geometry functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 788A5A2B0D4574C8005BE7C4 /* geometry functions.h */; };
+		788A5A370D4574C8005BE7C4 /* TitleAndCrawl.c in Sources */ = {isa = PBXBuildFile; fileRef = 788A5A2D0D4574C8005BE7C4 /* TitleAndCrawl.c */; };
+		788A5A380D4574C8005BE7C4 /* TitleAndCrawl.h in Headers */ = {isa = PBXBuildFile; fileRef = 788A5A2E0D4574C8005BE7C4 /* TitleAndCrawl.h */; };
+		788A5A390D4574C8005BE7C4 /* undo.c in Sources */ = {isa = PBXBuildFile; fileRef = 788A5A2F0D4574C8005BE7C4 /* undo.c */; };
+		788A5A3A0D4574C8005BE7C4 /* undo.h in Headers */ = {isa = PBXBuildFile; fileRef = 788A5A300D4574C8005BE7C4 /* undo.h */; };
+		788A5A4B0D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 788A5A470D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.h */; };
+		788A5A4C0D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 788A5A480D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.m */; };
+		788A5A4D0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 788A5A490D4575EC005BE7C4 /* NSTextViewWithFocusDetection.h */; };
+		788A5A4E0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 788A5A4A0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.m */; };
+		7891DF5D0CB06A0F001F0ED7 /* Intro.c in Sources */ = {isa = PBXBuildFile; fileRef = 7891DF5C0CB06A0F001F0ED7 /* Intro.c */; };
+		7891DF5F0CB06A16001F0ED7 /* Intro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7891DF5E0CB06A16001F0ED7 /* Intro.h */; };
+		78B77C060CB1D3CE00B8BB19 /* Shared Structures.c in Sources */ = {isa = PBXBuildFile; fileRef = 78B77C050CB1D3CE00B8BB19 /* Shared Structures.c */; };
+		78B77C080CB1D3D800B8BB19 /* Shared Structures.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B77C070CB1D3D800B8BB19 /* Shared Structures.h */; };
+		78B77C160CB1D47100B8BB19 /* TitleFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B77C150CB1D47100B8BB19 /* TitleFont.h */; };
+		78B7C42F0C9C6209008F8C57 /* DistributorFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B7C42E0C9C6209008F8C57 /* DistributorFont.h */; };
+		78B7C4310C9C6215008F8C57 /* DistributorSearchlights.h in Headers */ = {isa = PBXBuildFile; fileRef = 78B7C4300C9C6215008F8C57 /* DistributorSearchlights.h */; };
+		78FF61860C87959900930BF5 /* ColorBar1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 78FF61850C87959900930BF5 /* ColorBar1.bmp */; };
+		78FF618E0C8795B200930BF5 /* ColorBar2.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 78FF618D0C8795B200930BF5 /* ColorBar2.bmp */; };
+		7E07ED950B2737D6003783ED /* swtsg.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7E07ED940B2737D6003783ED /* swtsg.icns */; };
+		7E1B366409C7A014009EF2D9 /* Searchlight Mask.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B366309C7A014009EF2D9 /* Searchlight Mask.bmp */; };
+		7E36184A09C73ED600399498 /* TCF Backdrop.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7E36184909C73ED600399498 /* TCF Backdrop.bmp */; };
+		7E85B00E09A4F2A0000E34DB /* Tower.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7E85B00D09A4F2A0000E34DB /* Tower.bmp */; };
+		7E98178E095F4D4400D79658 /* definitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E98178D095F4D4400D79658 /* definitions.h */; };
+		7EA00E2009521E83001B73A9 /* StarWarsTSGController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA00E1E09521E83001B73A9 /* StarWarsTSGController.h */; };
+		7EA00E2109521E83001B73A9 /* StarWarsTSGController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA00E1F09521E83001B73A9 /* StarWarsTSGController.m */; };
+		7EA32C510A895FB100D3BC87 /* Star Wars TSG_Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 7EA32C500A895FB100D3BC87 /* Star Wars TSG_Prefix.pch */; };
+		7EB937BC0AC6202000553DA8 /* APPL.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7EB937BB0AC6202000553DA8 /* APPL.icns */; };
+		7EFFC5A909AE2DF700FE605D /* Tower Mask.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7EFFC5A809AE2DF700FE605D /* Tower Mask.bmp */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7814CF3E0CA9D96300329EE8 /* FilmCoFont.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = FilmCoFont.c; sourceTree = "<group>"; };
+		7814CF400CA9D97400329EE8 /* FilmCoFont.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FilmCoFont.h; sourceTree = "<group>"; };
+		7814CF420CA9D98300329EE8 /* FilmCo.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = FilmCo.c; sourceTree = "<group>"; };
+		7814CF440CA9D98C00329EE8 /* FilmCo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FilmCo.h; sourceTree = "<group>"; };
+		7814CFA70CA9DCA500329EE8 /* SequenceTimes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SequenceTimes.h; sourceTree = "<group>"; };
+		781605DB0C9C53E000609567 /* Distributor.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = Distributor.c; sourceTree = "<group>"; };
+		781605DD0C9C53F100609567 /* DistributorFont.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DistributorFont.c; sourceTree = "<group>"; };
+		781605DF0C9C53FC00609567 /* DistributorSearchlights.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = DistributorSearchlights.c; sourceTree = "<group>"; };
+		7826D93F0E992EFC00B80AAD /* Font (Crawl).dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font (Crawl).dat"; sourceTree = "<group>"; };
+		7826D9400E992EFC00B80AAD /* Font (Intro).dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font (Intro).dat"; sourceTree = "<group>"; };
+		7826D9410E992EFC00B80AAD /* Font (DistInfo).dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font (DistInfo).dat"; sourceTree = "<group>"; };
+		782D2DF60CA0A6C6000761C1 /* SequenceTimes.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = SequenceTimes.c; sourceTree = "<group>"; };
+		7855DC160CB71DCC00BCA616 /* cbf functions.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "cbf functions.c"; sourceTree = "<group>"; };
+		7855DC170CB71DCC00BCA616 /* cbf functions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "cbf functions.h"; sourceTree = "<group>"; };
+		7855DC1C0CB71E9800BCA616 /* image buffer functions.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "image buffer functions.c"; sourceTree = "<group>"; };
+		7855DC1D0CB71E9800BCA616 /* image buffer functions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "image buffer functions.h"; sourceTree = "<group>"; };
+		7855DC200CB71EAE00BCA616 /* numeric functions.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "numeric functions.c"; sourceTree = "<group>"; };
+		7855DC210CB71EAE00BCA616 /* numeric functions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "numeric functions.h"; sourceTree = "<group>"; };
+		7855DC240CB71EEA00BCA616 /* string functions.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "string functions.c"; sourceTree = "<group>"; };
+		7855DC250CB71EEA00BCA616 /* string functions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "string functions.h"; sourceTree = "<group>"; };
+		7855DC260CB71EEA00BCA616 /* user interface functions.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "user interface functions.c"; sourceTree = "<group>"; };
+		7855DC270CB71EEA00BCA616 /* user interface functions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "user interface functions.h"; sourceTree = "<group>"; };
+		787274510C9C625B00044BF4 /* Distributor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Distributor.h; sourceTree = "<group>"; };
+		7872751A0C9C6E1500044BF4 /* bool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = bool.h; sourceTree = "<group>"; };
+		787275260C9C6F3C00044BF4 /* nil.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = nil.h; sourceTree = "<group>"; };
+		787D74CF0C9F5D2C00FA6FA4 /* TitleFont.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = TitleFont.c; sourceTree = "<group>"; };
+		788A5A2A0D4574C8005BE7C4 /* geometry functions.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "geometry functions.c"; sourceTree = "<group>"; };
+		788A5A2B0D4574C8005BE7C4 /* geometry functions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "geometry functions.h"; sourceTree = "<group>"; };
+		788A5A2D0D4574C8005BE7C4 /* TitleAndCrawl.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = TitleAndCrawl.c; sourceTree = "<group>"; };
+		788A5A2E0D4574C8005BE7C4 /* TitleAndCrawl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TitleAndCrawl.h; sourceTree = "<group>"; };
+		788A5A2F0D4574C8005BE7C4 /* undo.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = undo.c; sourceTree = "<group>"; };
+		788A5A300D4574C8005BE7C4 /* undo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = undo.h; sourceTree = "<group>"; };
+		788A5A470D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSTextFieldWithFocusDetection.h; sourceTree = "<group>"; };
+		788A5A480D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSTextFieldWithFocusDetection.m; sourceTree = "<group>"; };
+		788A5A490D4575EC005BE7C4 /* NSTextViewWithFocusDetection.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSTextViewWithFocusDetection.h; sourceTree = "<group>"; };
+		788A5A4A0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSTextViewWithFocusDetection.m; sourceTree = "<group>"; };
+		7891DF5C0CB06A0F001F0ED7 /* Intro.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = Intro.c; sourceTree = "<group>"; };
+		7891DF5E0CB06A16001F0ED7 /* Intro.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Intro.h; sourceTree = "<group>"; };
+		78B77C050CB1D3CE00B8BB19 /* Shared Structures.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "Shared Structures.c"; sourceTree = "<group>"; };
+		78B77C070CB1D3D800B8BB19 /* Shared Structures.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "Shared Structures.h"; sourceTree = "<group>"; };
+		78B77C150CB1D47100B8BB19 /* TitleFont.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TitleFont.h; sourceTree = "<group>"; };
+		78B7C42E0C9C6209008F8C57 /* DistributorFont.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DistributorFont.h; sourceTree = "<group>"; };
+		78B7C4300C9C6215008F8C57 /* DistributorSearchlights.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DistributorSearchlights.h; sourceTree = "<group>"; };
+		78FF61850C87959900930BF5 /* ColorBar1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = ColorBar1.bmp; sourceTree = "<group>"; };
+		78FF618D0C8795B200930BF5 /* ColorBar2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = ColorBar2.bmp; sourceTree = "<group>"; };
+		7E07ED940B2737D6003783ED /* swtsg.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = swtsg.icns; sourceTree = "<group>"; };
+		7E1B366309C7A014009EF2D9 /* Searchlight Mask.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Searchlight Mask.bmp"; sourceTree = "<group>"; };
+		7E36184909C73ED600399498 /* TCF Backdrop.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "TCF Backdrop.bmp"; sourceTree = "<group>"; };
+		7E85B00D09A4F2A0000E34DB /* Tower.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = Tower.bmp; sourceTree = "<group>"; };
+		7E98178D095F4D4400D79658 /* definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = definitions.h; sourceTree = "<group>"; };
+		7EA00E1E09521E83001B73A9 /* StarWarsTSGController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StarWarsTSGController.h; sourceTree = "<group>"; };
+		7EA00E1F09521E83001B73A9 /* StarWarsTSGController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = StarWarsTSGController.m; sourceTree = "<group>"; };
+		7EA32C500A895FB100D3BC87 /* Star Wars TSG_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "Star Wars TSG_Prefix.pch"; sourceTree = "<group>"; };
+		7EB937BB0AC6202000553DA8 /* APPL.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = APPL.icns; sourceTree = "<group>"; };
+		7EFFC5A809AE2DF700FE605D /* Tower Mask.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Tower Mask.bmp"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Star Wars TSG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Wars TSG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				788A5A470D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.h */,
+				788A5A480D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.m */,
+				788A5A490D4575EC005BE7C4 /* NSTextViewWithFocusDetection.h */,
+				788A5A4A0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.m */,
+				7EA00E1E09521E83001B73A9 /* StarWarsTSGController.h */,
+				7EA00E1F09521E83001B73A9 /* StarWarsTSGController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Star Wars TSG.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Star Wars TSG */ = {
+			isa = PBXGroup;
+			children = (
+				7872746A0C9C62E900044BF4 /* Model */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "Star Wars TSG";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7EA32C500A895FB100D3BC87 /* Star Wars TSG_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EB937BB0AC6202000553DA8 /* APPL.icns */,
+				7E07ED940B2737D6003783ED /* swtsg.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				78FF61850C87959900930BF5 /* ColorBar1.bmp */,
+				78FF618D0C8795B200930BF5 /* ColorBar2.bmp */,
+				7826D9410E992EFC00B80AAD /* Font (DistInfo).dat */,
+				7826D9400E992EFC00B80AAD /* Font (Intro).dat */,
+				7826D93F0E992EFC00B80AAD /* Font (Crawl).dat */,
+				7E85B00D09A4F2A0000E34DB /* Tower.bmp */,
+				7EFFC5A809AE2DF700FE605D /* Tower Mask.bmp */,
+				7E36184909C73ED600399498 /* TCF Backdrop.bmp */,
+				7E1B366309C7A014009EF2D9 /* Searchlight Mask.bmp */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7872746A0C9C62E900044BF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7872751A0C9C6E1500044BF4 /* bool.h */,
+				7855DC170CB71DCC00BCA616 /* cbf functions.h */,
+				7855DC160CB71DCC00BCA616 /* cbf functions.c */,
+				7E98178D095F4D4400D79658 /* definitions.h */,
+				787274510C9C625B00044BF4 /* Distributor.h */,
+				781605DB0C9C53E000609567 /* Distributor.c */,
+				78B7C42E0C9C6209008F8C57 /* DistributorFont.h */,
+				781605DD0C9C53F100609567 /* DistributorFont.c */,
+				78B7C4300C9C6215008F8C57 /* DistributorSearchlights.h */,
+				781605DF0C9C53FC00609567 /* DistributorSearchlights.c */,
+				7814CF440CA9D98C00329EE8 /* FilmCo.h */,
+				7814CF420CA9D98300329EE8 /* FilmCo.c */,
+				7814CF400CA9D97400329EE8 /* FilmCoFont.h */,
+				7814CF3E0CA9D96300329EE8 /* FilmCoFont.c */,
+				788A5A2B0D4574C8005BE7C4 /* geometry functions.h */,
+				788A5A2A0D4574C8005BE7C4 /* geometry functions.c */,
+				7855DC1D0CB71E9800BCA616 /* image buffer functions.h */,
+				7855DC1C0CB71E9800BCA616 /* image buffer functions.c */,
+				7891DF5E0CB06A16001F0ED7 /* Intro.h */,
+				7891DF5C0CB06A0F001F0ED7 /* Intro.c */,
+				787275260C9C6F3C00044BF4 /* nil.h */,
+				7855DC210CB71EAE00BCA616 /* numeric functions.h */,
+				7855DC200CB71EAE00BCA616 /* numeric functions.c */,
+				7814CFA70CA9DCA500329EE8 /* SequenceTimes.h */,
+				782D2DF60CA0A6C6000761C1 /* SequenceTimes.c */,
+				78B77C070CB1D3D800B8BB19 /* Shared Structures.h */,
+				78B77C050CB1D3CE00B8BB19 /* Shared Structures.c */,
+				7855DC250CB71EEA00BCA616 /* string functions.h */,
+				7855DC240CB71EEA00BCA616 /* string functions.c */,
+				788A5A2E0D4574C8005BE7C4 /* TitleAndCrawl.h */,
+				788A5A2D0D4574C8005BE7C4 /* TitleAndCrawl.c */,
+				78B77C150CB1D47100B8BB19 /* TitleFont.h */,
+				787D74CF0C9F5D2C00FA6FA4 /* TitleFont.c */,
+				788A5A300D4574C8005BE7C4 /* undo.h */,
+				788A5A2F0D4574C8005BE7C4 /* undo.c */,
+				7855DC270CB71EEA00BCA616 /* user interface functions.h */,
+				7855DC260CB71EEA00BCA616 /* user interface functions.c */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA00E2009521E83001B73A9 /* StarWarsTSGController.h in Headers */,
+				7E98178E095F4D4400D79658 /* definitions.h in Headers */,
+				78B7C42F0C9C6209008F8C57 /* DistributorFont.h in Headers */,
+				78B7C4310C9C6215008F8C57 /* DistributorSearchlights.h in Headers */,
+				787274520C9C625B00044BF4 /* Distributor.h in Headers */,
+				7872751B0C9C6E1500044BF4 /* bool.h in Headers */,
+				787275270C9C6F3C00044BF4 /* nil.h in Headers */,
+				7814CF410CA9D97400329EE8 /* FilmCoFont.h in Headers */,
+				7814CF450CA9D98C00329EE8 /* FilmCo.h in Headers */,
+				7814CFA80CA9DCA500329EE8 /* SequenceTimes.h in Headers */,
+				7891DF5F0CB06A16001F0ED7 /* Intro.h in Headers */,
+				78B77C080CB1D3D800B8BB19 /* Shared Structures.h in Headers */,
+				78B77C160CB1D47100B8BB19 /* TitleFont.h in Headers */,
+				7855DC190CB71DCC00BCA616 /* cbf functions.h in Headers */,
+				7855DC1F0CB71E9800BCA616 /* image buffer functions.h in Headers */,
+				7855DC230CB71EAE00BCA616 /* numeric functions.h in Headers */,
+				7855DC290CB71EEA00BCA616 /* string functions.h in Headers */,
+				7855DC2B0CB71EEA00BCA616 /* user interface functions.h in Headers */,
+				788A5A350D4574C8005BE7C4 /* geometry functions.h in Headers */,
+				788A5A380D4574C8005BE7C4 /* TitleAndCrawl.h in Headers */,
+				788A5A3A0D4574C8005BE7C4 /* undo.h in Headers */,
+				788A5A4B0D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.h in Headers */,
+				788A5A4D0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Star Wars TSG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A7EC320B6075D200F0A8B5 /* Build configuration list for PBXNativeTarget "Star Wars TSG" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Star Wars TSG";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "Star Wars TSG";
+			productReference = 8D1107320486CEB800E47090 /* Star Wars TSG.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 78A7EC360B6075D200F0A8B5 /* Build configuration list for PBXProject "Star Wars TSG" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Star Wars TSG */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Star Wars TSG */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				7E85B00E09A4F2A0000E34DB /* Tower.bmp in Resources */,
+				7EFFC5A909AE2DF700FE605D /* Tower Mask.bmp in Resources */,
+				7E36184A09C73ED600399498 /* TCF Backdrop.bmp in Resources */,
+				7E1B366409C7A014009EF2D9 /* Searchlight Mask.bmp in Resources */,
+				7EA32C510A895FB100D3BC87 /* Star Wars TSG_Prefix.pch in Resources */,
+				7EB937BC0AC6202000553DA8 /* APPL.icns in Resources */,
+				7E07ED950B2737D6003783ED /* swtsg.icns in Resources */,
+				78FF61860C87959900930BF5 /* ColorBar1.bmp in Resources */,
+				78FF618E0C8795B200930BF5 /* ColorBar2.bmp in Resources */,
+				7826D9420E992EFC00B80AAD /* Font (Crawl).dat in Resources */,
+				7826D9430E992EFC00B80AAD /* Font (Intro).dat in Resources */,
+				7826D9440E992EFC00B80AAD /* Font (DistInfo).dat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				7EA00E2109521E83001B73A9 /* StarWarsTSGController.m in Sources */,
+				781605DC0C9C53E000609567 /* Distributor.c in Sources */,
+				781605DE0C9C53F100609567 /* DistributorFont.c in Sources */,
+				781605E00C9C53FC00609567 /* DistributorSearchlights.c in Sources */,
+				787D74D00C9F5D2C00FA6FA4 /* TitleFont.c in Sources */,
+				782D2DF70CA0A6C6000761C1 /* SequenceTimes.c in Sources */,
+				7814CF3F0CA9D96300329EE8 /* FilmCoFont.c in Sources */,
+				7814CF430CA9D98300329EE8 /* FilmCo.c in Sources */,
+				7891DF5D0CB06A0F001F0ED7 /* Intro.c in Sources */,
+				78B77C060CB1D3CE00B8BB19 /* Shared Structures.c in Sources */,
+				7855DC180CB71DCC00BCA616 /* cbf functions.c in Sources */,
+				7855DC1E0CB71E9800BCA616 /* image buffer functions.c in Sources */,
+				7855DC220CB71EAE00BCA616 /* numeric functions.c in Sources */,
+				7855DC280CB71EEA00BCA616 /* string functions.c in Sources */,
+				7855DC2A0CB71EEA00BCA616 /* user interface functions.c in Sources */,
+				788A5A340D4574C8005BE7C4 /* geometry functions.c in Sources */,
+				788A5A370D4574C8005BE7C4 /* TitleAndCrawl.c in Sources */,
+				788A5A390D4574C8005BE7C4 /* undo.c in Sources */,
+				788A5A4C0D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.m in Sources */,
+				788A5A4E0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78A7EC330B6075D200F0A8B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Star Wars TSG_Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Star Wars TSG";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		78A7EC340B6075D200F0A8B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Star Wars TSG_Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Star Wars TSG";
+				SECTORDER_FLAGS = "";
+				VALID_ARCHS = x86_64;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		78A7EC350B6075D200F0A8B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Star Wars TSG_Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Star Wars TSG";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		78A7EC370B6075D200F0A8B5 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
+				GCC_MODEL_TUNING = G4;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Development;
+		};
+		78A7EC380B6075D200F0A8B5 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
+				GCC_MODEL_TUNING = G4;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Deployment;
+		};
+		78A7EC390B6075D200F0A8B5 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_CHAR_IS_UNSIGNED_CHAR = YES;
+				GCC_MODEL_TUNING = G4;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = NO;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				SDKROOT = macosx;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78A7EC320B6075D200F0A8B5 /* Build configuration list for PBXNativeTarget "Star Wars TSG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A7EC330B6075D200F0A8B5 /* Development */,
+				78A7EC340B6075D200F0A8B5 /* Deployment */,
+				78A7EC350B6075D200F0A8B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		78A7EC360B6075D200F0A8B5 /* Build configuration list for PBXProject "Star Wars TSG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A7EC370B6075D200F0A8B5 /* Development */,
+				78A7EC380B6075D200F0A8B5 /* Deployment */,
+				78A7EC390B6075D200F0A8B5 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

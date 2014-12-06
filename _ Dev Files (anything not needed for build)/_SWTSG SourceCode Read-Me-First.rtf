@@ -1,0 +1,288 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww22540\viewh13940\viewkind0
+\pard\qc\pardirnatural
+
+\f0\b\fs48 \cf0 Star Wars Title Sequence Generator\
+
+\fs36 Source Code Introduction\
+
+\i\b0\fs28 Darel Rex Finley, 2010\
+v1.2.2\
+\pard\qj\pardirnatural
+
+\i0 \cf0 \
+\
+\pard\qj\pardirnatural
+
+\i\fs20 \cf0 Notice:  The title \'93Star Wars,\'94 and other text, imagery, and graphic sequences described/simulated herein are copyrighted by their respective copyright holders, and are used without permission in this app for non-commercial, informational purposes.\'a0 Commercial use is prohibited.\'a0 Not affiliated with any companies or individuals.\
+\pard\qj\pardirnatural
+
+\i0\fs28 \cf0 \
+\
+\pard\qj\pardirnatural
+
+\b \cf0 PURPOSE OF THIS DOCUMENT\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+This document is not a comprehensive documentation of the SWTSG project.  For information about using the app, consult the tutorial at http://alienryderflex.com/crawl.  For detailed information about how the code works, study the code itself and the comments embedded in it, as well as the tutorials and explanatory images to which those comments sometimes refer.\
+\
+The purpose of this document is to alert you to those conventions and peculiarities of the SWTSG project which are most likely to throw you off if you try to study the code without first being made aware of them.  Read this document a couple times before delving into the source code itself.\
+\
+At the bottom of this document is a Software Quality Analysis, which describes SWTSG in terms of the popular conception of Software Quality attributes.\
+\
+\
+\pard\qj\pardirnatural
+
+\b \cf0 APP FAMILIARITY\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+Before reading these notes, it is a good idea to first use the SWTSG application to the point that you feel familiar with what it does, from the perspective of an end-user.  For detailed usage instructions, consult the tutorial at:  http://alienryderflex.com/crawl\
+\
+\
+\pard\qj\pardirnatural
+
+\b \cf0 PROJECT ORGANIZATION\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+SWTSG is essentially a C project.  It uses ObjC only as needed to interface with the UI and other OS structures.  The project is not implemented as OO classes, but instead is organized in the following manner:\
+\
+\pard\tqr\tx1620\tx1900\li1900\fi-1900\qj\pardirnatural
+\cf0 	View:	The UI; designed in Interface Builder.\
+\
+	Controller:	One ObjC (.m) controller file and its associated header file.\
+\
+		Two ObjC UI-control subclass files (necessary for reasons described in their comments) and their associated header files.\
+\
+	Model:	Many C (.c) files and their associated header files.  Each C file contains a group of C functions and data structures that serve a related purpose.  (These files do not employ encapsulation except on a per-function basis \'97 they are not classes.)\
+\
+		One definitions file, \'93definitions.h\'94, that contains almost all custom constants used throughout the project.\
+\pard\qj\pardirnatural
+\cf0 \
+An important convention of this project is that all functions in the .c files:\
+\pard\tqr\tx720\tx980\li980\fi-980\qj\pardirnatural
+\cf0 	(1)	are pure C (not ObjC),\
+	(2)	do not reference any platform-dependent or development-system-dependent objects, functions, or data structures, and\
+	(3)	do not reference the Controller or the View \'97 they are called by the Controller, not the other way around.\
+\pard\tx0\qj\pardirnatural
+\cf0 A minor exception to item (2) is that the C code may make use of semi-standard math functions such as sqrt, pow, cos, sin, exp, random, and srandomdev (as defined in math.h and stdlib.h).  The C code also makes use of double-slash (single-line) comments.  (Also, the file bool.h contains a compiler condition that probably should be eliminated during porting \'97 see the comments in that file.)\
+\
+Note that the file \'93string functions.c\'94 contains code to convert Mac Roman text to Unicode.  This does not violate the above rules because (a) it is entirely self-contained, and so will compile and work perfectly on non-Mac platforms, and (b) it is there to allow the app to up-convert user files created by pre-1.1.5 versions of the Mac app.  Users of a ported (non-Mac), 1.1.5-or-later version of the app probably will never encounter such files, and if they do, the app will up-convert them correctly.\
+\pard\qj\pardirnatural
+\cf0 \
+It is intended that the Model (the .c files and their corresponding .h files) be portable to other platforms with little or no modification, and that only the Controller and View need be seriously reworked when porting the project.  (See also comments in \'93Flexibility\'94 section below.)\
+\
+\
+\pard\qj\pardirnatural
+
+\b \cf0 CODE FORMATTING\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+SWTSG employs a compact brace style, \'93CCC,\'94 in which all braces come at the ends of lines of code.  Rarely is a brace put on an otherwise empty line.  Changes in the amount of beginning-of-line indention are tied to the occurrence of brace(s) on the previous line, 
+\i without exception.
+\i0   This style delivers three advantages over more common, spread-out brace styles:\
+\
+\pard\tqr\tx460\tx700\tx3240\li3240\fi-3240\qj\pardirnatural
+\cf0 	1.	Compactness	Much more code can be viewed without scrolling, or increasing window/display size.\
+	2.	Comprehension	Nesting of code is easily understood by simply ignoring the braces and scanning the beginning-of-line indention.  Everything indented under a statement is part of that statement.\
+	3.	Correction	Brace errors are extremely easy to find and fix:  Just look for any open-brace that is not followed by a one-step 
+\i increase
+\i0  of indention on the next line, or any set of close-braces that are not followed by a corresponding 
+\i reduction
+\i0  of indention on the next line.\
+\pard\qj\pardirnatural
+\cf0 \
+\
+\pard\qj\pardirnatural
+
+\b \cf0 VARIABLE NAMING\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+Local variables, struct member variables, and function/method names always start with a lowercase letter.  Examples:  localVar, structMemberVar, functionName()\
+\
+Global variables and UI outlets always start with an uppercase letter.  Example:  GlobalVar, ButtonOutlet\
+\
+Struct types always start with an uppercase letter and end with an underscore.  Example:  StructType_\
+\
+Constants are all uppercase with words separated by underscores.  Example:  MY_CONSTANT\
+\
+\
+\pard\qj\pardirnatural
+
+\b \cf0 ENDIANNESS\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+This project is designed to be free of endianness issues.  That means that whenever the project reads data from a file or writes data to a file, it either uses an endianness-free format for that data, or employs special code to read/write little-endian values without the need for a little-endian processor.\
+\
+\
+\pard\qj\pardirnatural
+
+\b \cf0 FONTS\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+SWTSG uses six custom fonts for image rendering.  These fonts are not OS-ready; they are understood only by the SWTSG app.\
+\
+\pard\tx2880\qj\pardirnatural
+\cf0 Distributor	custom spline polygons\
+Distributor Info	compressed bitmap (derived from Big Casion)\
+Film Company	custom spline polygons\
+Intro	compressed bitmap (derived from Franklin Gothic)\
+Title	custom spline polygons (partly modelled after Star Jedi)\
+Crawl	compressed bitmap (derived from Helvetica Bold)\
+\pard\qj\pardirnatural
+\cf0 \
+The decision not to use the OS for font rendering was made for these reasons:\
+\
+\pard\tx360\li360\fi-360\qj\pardirnatural
+\cf0 1.	to ensure identical output on any individual\'92s computer (and on any platform to which the project may be ported)\
+2.	to simplify the task of porting\
+3.	to allow extremely close mimicry of logos from the Star Wars title sequence\
+4.	to allow special distortions of glyphs as required by many parts of the sequence\
+5.	to maintain a good balance between rendering speed, image quality, and memory footprint, particularly when rendering the Crawl text\
+6.	to avoid technical oversights in OS X\'92s font-handling abilities*\
+\
+\pard\qj\pardirnatural
+
+\fs24 \cf0 *Most of the development work for SWTSG was done on an early-2002 white iBook that won\'92t run anything more recent than Panther (OS X 10.3).  Tiger (OS X 10.4) supports the drawing of text directly into a specified bitmap, but Panther does not.  Even if I had bought a new laptop just to get on-the-go access to this ability, I would still have been creating an app that would not run at all under Panther, which I find unacceptable.  Panther 
+\i does
+\i0  support the drawing of text into an NSImage, to which you can assign a pre-existing bitmap.  But to draw text into that NSImage, you must first call its lockFocus method.  lockFocus creates a new bitmap, of 
+\i OS-chosen
+\i0  structure, for the NSImage, and copies the contents of your bitmap into the new one, translating bitmap structure on-the-fly as necessary.  Then, when you draw the text into the NSImage, you\'92re actually drawing it into the new, OS-created bitmap \'97 your pre-existing bitmap is untouched.  These obstacles, in combination with reasons 1-5 above, were enough to convince me to take the route I did.\
+\pard\qj\pardirnatural
+
+\fs28 \cf0 \
+\
+\pard\qj\pardirnatural
+
+\b \cf0 UNICODE\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+Prior to version 1.1.5, SWTSG was designed from the ground up to work with only the ASCII-like, Mac Roman, C-string character set (0x0 to 0xFF).  Starting with version 1.1.5, SWTSG's character- and string-handling code, and custom font formats, are reworked to allow support for Unicode characters.\
+\
+Support of Unicode does 
+\i not
+\i0  mean that glyphs for all, or even many Unicode characters are included in the app.  It means just that the app's code, font structures, and user-file format now know how to deal with Unicode characters that are not available to a Mac Roman C-string.  Actual support for any of those glyphs is another matter \'97 version 1.2.0, in fact, supports only sixty-six characters not supported by the Mac Roman set.\
+\
+\
+\pard\qj\pardirnatural
+
+\b \cf0 NON-USE OF \'93INLINE\'94\
+\pard\qj\pardirnatural
+
+\b0 \cf0 \
+Testing with and without the keyword \'93inline\'94 revealed that the app was actually slightly faster without it.  Presumably the compiler makes optimal decisions about inlining, so the \'93inline\'94 keyword is not used throughout this project.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\b\fs36 \cf0 Software Quality Analysis of SWTSG\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+
+\b0\fs28 \cf0 \
+
+\b Usability\
+
+\b0 The user interface of this project was designed to be as simple and intuitive as possible.  This was achieved through:\
+\pard\tx360\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li360\fi-360\qj
+\cf0 \'95	on-the-fly rendering of preview images (as opposed to button-fired previews)\
+\'95	minimal use of the menu bar \'97 Most controls are in front of the user in a small, clearly organized interface.\
+\'95	user options intentionally limited to those most relevant to making an authentic (but custom-text) Star Wars-style opening sequence.  For example, there is no option to choose the color of the Crawl text, or the speed of the Distributor searchlights.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+
+\b Results\
+
+\b0 This generally is not listed as a software quality attribute, but is probably one of the most important quality characteristics to the end-user.  In SWTSG, the goal was to render an opening title sequence that resembles, as authentically as possible, the sequence from the original Star Wars trilogy.  Many techniques/tutorials for creating a Star Wars text crawl, and other features of the title sequence, pre-existed this project, but most of them rendered results that were noticeably different from the original movie sequence.\
+\
+
+\b Agility\
+
+\b0 Difficult to define with relation to SWTSG.  The project\'92s agility is either very low, or the category is not applicable.\
+\
+
+\b Flexibility\
+\pard\tx360\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li360\fi-360\qj
+
+\b0 \cf0 \'95	SWTSG was written mostly in straight C, with the intention that the Model (.c) code files can be dropped into any C or C-inclusive development system without modification.  Only the View (user interface) and OS-interactive, Controller code need be modified during porting, and these were developed using Apple\'92s standard Interface Builder and Xcode, respectively.  Use of ObjC in the Controller was limited to that necessary to communicate with the OS.  (Note:  It is conceivable that the Model files could be compiled using a C compiler, then dropped into a non-C-inclusive development environment where the Controller and View are to be hand-translated.)\
+\'95	The format of user files (containing the user-entered text of the crawl and other user settings) is simple XML, allowing it to be easily interpreted, modified, or generated by other XML-savvy software.\
+\'95	Rendered output is saved as a sequence of numbered BMP files.  BMP files can be generated quickly, and have become a 
+\i de facto
+\i0  cross-platform standard for uncompressed images.  This provides the user with compression-free material to which any video codec of any platform can be applied \'97 and applied without the distortions and/or compression efficiency issues associated with recompression.\
+\'95	Fonts used by SWTSG are all stored as custom spline polygons or as compressed bitmaps.  The OS\'92s font system is not employed by the compiled, end-user app (except, of course, in the UI \'97 e.g. text fields, window titles, etc.).  Hence, when porting SWTSG to other platforms, there are no font issues, e.g. missing fonts, mismatched fonts, or the need for platform-translation of font-manipulating code.  This decision also allows the app to run under a Mac OS as old as OS X 10.3 \'93Panther\'94 \'97 see \'93FONTS\'94 section above.  (Note:  Due to recent changes in Xcode, the currently compiled app requires at least OS X 10.4 \'93Tiger.\'94  However, it is likely that the app could be recompiled in an older version of Xcode, thus creating a Panther-compatible executable.)\
+\'95	SWTSG does not make use of 3D systems (e.g. OpenGL), and instead uses its own geometric calculations to determine the appropriate color of each pixel.  Hence, when porting SWTSG to other platforms, there are no 3D-system installation issues, version issues, or 3D code translation requirements.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+
+\b Interoperability\
+
+\b0 See comments in the above \'93Flexibility\'94 section regarding user file format, rendered output format, and font usage.\
+\
+
+\b Maintainability\
+\pard\tx360\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li360\fi-360\qj
+
+\b0 \cf0 \'95	To modify SWTSG meaningfully and easily, a developer should be proficient with C, ObjC, and Xcode, and possess a thorough understanding of geometry, trigonometry, and basic perspective.  Even with these prerequisites, however, some sections will require careful study to understand.\
+\'95	Highly descriptive function names, variable names, and constant names are used throughout.\
+\'95	Comments are used liberally throughout, which should help an unfamiliar developer to find the particular piece of code which needs to be studied/modified.\
+\'95	SWTSG\'92s sourcecode employs a compact brace style which, although initially intimidating to developers not accustomed to it, actually realizes multiple advantages that improve understanding of the code, and discovering/correcting errors in it.  See above section \'93CODE FORMATTING\'94 for details.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+
+\b Reliability\
+
+\b0 Not Applicable \'97 SWTSG has no \'93mean time to failure,\'94 and should perform as designed 
+\i ad infinitum.
+\i0   Every effort was made to ensure against memory leaks, and in any case SWTSG does not need to be left open for extended periods of time (days or longer).\
+\
+
+\b Reusability\
+\pard\qj\pardirnatural
+
+\b0 \cf0 SWTSG was coded primarily to meet its specific purpose of generating Star Wars-style opening sequences.  However, the code of the project is reusable in the following ways:\
+\pard\tx360\li360\fi-360\qj\pardirnatural
+\cf0 \'95	Employed techniques can be learned/copied from this project, using it as a reference to how certain things were done.\
+\'95	Some functions/methods are general-purpose enough to be copied into another project and used there with no modification, or with some modification.\
+\'95	The whole SWTSG project can be modified to taste, and/or ported to other platforms.\
+\pard\qj\pardirnatural
+\cf0 No part of this project is designed for reusability as a general-purpose, OO class library \'97 that is not its function, and would conflict with Flexibility goals (see above Flexibility section).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+
+\b Supportability\
+
+\b0 Difficult to assess.  SWTSG should function well on any desktop or laptop computer for which it is compiled, provided that the computer has enough free hard drive space to store the rendered output, and has a processor made after 2003.\
+\
+
+\b Performance\
+\pard\tx360\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li360\fi-360\ql\qnatural
+
+\b0 \cf0 \'95	SWTSG\'92s image-rendering code is multi-threaded to take maximum advantage of multi-processor and/or multi-core systems.\
+\pard\tx360\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li360\fi-360\qj
+\cf0 \'95	SWTSG\'92s image-rendering code is optimized, where practical, to avoid redundant calculations.\
+\'95	A significant trade-off in speed (during some portions of the sequence) results from the use of custom code to render images, since those images could be rendered much faster using a 3D system such as OpenGL or CoreAnimation.  Using those systems would cause compatibility issues affecting Supportability and Flexibility (see above sections), and could cause a very bad tradeoff between memory requirements and Results (see above section).  The speed of the app as designed, although much slower than could be achieved using a 3D system (for some portions of the sequence), is still plenty fast enough for a fanfilm maker who simply wants to create a custom Star Wars opening sequence.  Further, as processor speed and the use of multiprocessing continue to improve, speed should become a non-issue within several years of this release.  (And that will happen automatically, with no code changes/maintenance.)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\qj
+\cf0 \
+
+\b Security\
+
+\b0 Not applicable.  Responsibility to use SWTSG for legal purposes is a user-by-user, individually made decision.\
+\
+
+\b Scalability\
+
+\b0 SWTSG is an end-user (client) app, not a server app, and thus scales automatically \'97 as demand for it grows, so grows the number of end-user computers running the app.\
+\
+
+\b Testability\
+
+\b0 \'95 Being very narrow of purpose, SWTSG can be tested easily with relatively few scenarios.\
+\'95 SWTSG uses multi-threading in a simple way that fully exploits the multiprocessing capabilities of the computer for the task that really needs it (image rendering), but leaves most of the app\'92s code unaffected by multi-threading.  This minimizes the chances that obscure race conditions or other multi-threading issues will go undetected.}

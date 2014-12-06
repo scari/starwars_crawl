@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = x86_64;
+		activeBuildConfigurationName = Deployment;
+		activeExecutable = 6E4517CB0FC6C8F20091B708 /* Star Wars TSG */;
+		activeTarget = 8D1107260486CEB800E47090 /* Star Wars TSG */;
+		breakpoints = (
+		);
+		codeSenseManager = 6E4517D70FC6C9110091B708 /* Code sense */;
+		executables = (
+			6E4517CB0FC6C8F20091B708 /* Star Wars TSG */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					748,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 321329814;
+			PBXWorkspaceStateSaveDate = 321329814;
+		};
+		sourceControlManager = 6E4517D60FC6C9110091B708 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 161}";
+		};
+	};
+	6E4517CB0FC6C8F20091B708 /* Star Wars TSG */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Star Wars TSG";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	6E4517D60FC6C9110091B708 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	6E4517D70FC6C9110091B708 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	7814CF3E0CA9D96300329EE8 /* FilmCoFont.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1340, 26565}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1454}";
+		};
+	};
+	7814CF400CA9D97400329EE8 /* FilmCoFont.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 78}";
+		};
+	};
+	7814CF420CA9D98300329EE8 /* FilmCo.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 30585}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1128}";
+		};
+	};
+	7814CF440CA9D98C00329EE8 /* FilmCo.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {3052, 1095}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1290}";
+		};
+	};
+	7814CFA70CA9DCA500329EE8 /* SequenceTimes.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 261}";
+		};
+	};
+	781605DB0C9C53E000609567 /* Distributor.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1844, 19230}}";
+			sepNavSelRange = "{51, 0}";
+			sepNavVisRange = "{0, 1461}";
+			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
+		};
+	};
+	781605DD0C9C53F100609567 /* DistributorFont.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1332, 16890}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1168}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	781605DF0C9C53FC00609567 /* DistributorSearchlights.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1444, 675}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1368}";
+		};
+	};
+	782D2DF60CA0A6C6000761C1 /* SequenceTimes.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1395}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1289}";
+		};
+	};
+	7855DC160CB71DCC00BCA616 /* cbf functions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1028, 2025}}";
+			sepNavSelRange = "{4036, 0}";
+			sepNavVisRange = "{3692, 1065}";
+		};
+	};
+	7855DC170CB71DCC00BCA616 /* cbf functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1231, 304}}";
+			sepNavSelRange = "{217, 8}";
+			sepNavVisRange = "{0, 269}";
+			sepNavWindowFrame = "{{15, 57}, {750, 720}}";
+		};
+	};
+	7855DC1C0CB71E9800BCA616 /* image buffer functions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 2970}}";
+			sepNavSelRange = "{6416, 0}";
+			sepNavVisRange = "{6298, 1766}";
+		};
+	};
+	7855DC1D0CB71E9800BCA616 /* image buffer functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1132, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 616}";
+		};
+	};
+	7855DC200CB71EAE00BCA616 /* numeric functions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1050}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 605}";
+		};
+	};
+	7855DC210CB71EAE00BCA616 /* numeric functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 371}";
+		};
+	};
+	7855DC240CB71EEA00BCA616 /* string functions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1100, 7470}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1318}";
+		};
+	};
+	7855DC250CB71EEA00BCA616 /* string functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1350}";
+		};
+	};
+	7855DC260CB71EEA00BCA616 /* user interface functions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1035}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 593}";
+		};
+	};
+	7855DC270CB71EEA00BCA616 /* user interface functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 202}";
+		};
+	};
+	787274510C9C625B00044BF4 /* Distributor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2204, 885}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1587}";
+		};
+	};
+	7872751A0C9C6E1500044BF4 /* bool.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 214}";
+		};
+	};
+	787275260C9C6F3C00044BF4 /* nil.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 175}";
+		};
+	};
+	787D74CF0C9F5D2C00FA6FA4 /* TitleFont.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1340, 21060}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1392}";
+		};
+	};
+	788A5A2A0D4574C8005BE7C4 /* geometry functions.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 4995}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 781}";
+		};
+	};
+	788A5A2B0D4574C8005BE7C4 /* geometry functions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1596, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 2031}";
+		};
+	};
+	788A5A2D0D4574C8005BE7C4 /* TitleAndCrawl.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 21495}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 848}";
+		};
+	};
+	788A5A2E0D4574C8005BE7C4 /* TitleAndCrawl.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1425}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 812}";
+		};
+	};
+	788A5A2F0D4574C8005BE7C4 /* undo.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 2055}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 708}";
+		};
+	};
+	788A5A300D4574C8005BE7C4 /* undo.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 516}";
+		};
+	};
+	788A5A470D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 175}";
+		};
+	};
+	788A5A480D4575EC005BE7C4 /* NSTextFieldWithFocusDetection.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 555}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 955}";
+		};
+	};
+	788A5A490D4575EC005BE7C4 /* NSTextViewWithFocusDetection.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 212}";
+		};
+	};
+	788A5A4A0D4575EC005BE7C4 /* NSTextViewWithFocusDetection.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 855}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1200}";
+		};
+	};
+	7891DF5C0CB06A0F001F0ED7 /* Intro.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1231, 3150}}";
+			sepNavSelRange = "{2299, 8}";
+			sepNavVisRange = "{1904, 885}";
+		};
+	};
+	7891DF5E0CB06A16001F0ED7 /* Intro.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1364, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 549}";
+		};
+	};
+	78B77C050CB1D3CE00B8BB19 /* Shared Structures.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1004, 3465}}";
+			sepNavSelRange = "{51, 0}";
+			sepNavVisRange = "{0, 723}";
+		};
+	};
+	78B77C070CB1D3D800B8BB19 /* Shared Structures.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1356, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1298}";
+		};
+	};
+	78B77C150CB1D47100B8BB19 /* TitleFont.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 115}";
+		};
+	};
+	78B7C42E0C9C6209008F8C57 /* DistributorFont.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 83}";
+		};
+	};
+	78B7C4300C9C6215008F8C57 /* DistributorSearchlights.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1052, 472}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 809}";
+		};
+	};
+	7E98178D095F4D4400D79658 /* definitions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1884, 10020}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1476}";
+			sepNavWindowFrame = "{{15, 58}, {750, 720}}";
+		};
+	};
+	7EA00E1E09521E83001B73A9 /* StarWarsTSGController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 2130}}";
+			sepNavSelRange = "{49, 0}";
+			sepNavVisRange = "{0, 1402}";
+		};
+	};
+	7EA00E1F09521E83001B73A9 /* StarWarsTSGController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1852, 45765}}";
+			sepNavSelRange = "{22894, 0}";
+			sepNavVisRange = "{22216, 1702}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	7EA32C500A895FB100D3BC87 /* Star Wars TSG_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 472}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 157}";
+		};
+	};
+	8D1107260486CEB800E47090 /* Star Wars TSG */ = {
+		activeExec = 0;
+		executables = (
+			6E4517CB0FC6C8F20091B708 /* Star Wars TSG */,
+		);
+	};
+}

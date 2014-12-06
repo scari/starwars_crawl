@@ -1,0 +1,2 @@
+1.  White-on-black, 400-pt (72dpi) Helvetica Bold
+2.  Gaussian blur 1.0.

@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf330
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green63\blue255;}
+\margl1440\margr1440\vieww22540\viewh15140\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs36 \cf0 SWTSG Bitmap Font Compression\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\b0\fs28 \cf0 \
+The three bitmap fonts of SWTSG (Distributor Info, Intro, and Crawl) are compressed into an app-usable form via the following, six-step procedure.\
+\
+The fontname \'93Crawl\'94 is used as an example throughout this text, but you will need to perform this procedure on 
+\b all three bitmap fonts at the same time
+\b0 , not just one or two of them.  If you need to change only one of the three fonts, go ahead and compress the other two while you\'92re at it.  The compression code will fail if any of the three to-be-compressed files are missing.\
+\
+
+\b \cf2 1.
+\b0   Make a greyscale, raster-row-order, BMP file that contains an image of each glyph that needs to be supported in the Crawl font.  The glyph images do not need to be efficiently packed \'97 large spaces inbetween them are OK.  And they do not need to be in any particular order or spatial arrangement.  Name this file \'93Font (Crawl).bmp\'94 and place it in the root directory:  ~/\
+\
+
+\b 2.
+\b0   Populate the file \'93Font Compression Info (Crawl).c\'94 with data about the pixel locations and dimensions of each glyph.  See the current data/comments in that file as a guide to what it should contain.\
+\
+
+\b 3.
+\b0   In \'93definitions.h\'94, change the constant COMPRESS_FONTS from 0 to 1.\
+\
+
+\b 4.
+\b0   Build and launch the app.  When the disclaimer window appears, click the \'93Agree\'94 button.  The app will appear to stall with the button in a clicked state \'97 that is OK.  Patiently wait for a minute or so (probably much less on a fast computer), until an alert appears notifying you that the font compression completed successfully.\
+\
+
+\b 5.
+\b0   In \'93definitions.h\'94, change COMPRESS_FONTS back to 0.\
+\
+
+\b 6.
+\b0   A new file will have appeared in the root directory:  \'93Font (Crawl).dat\'94.  Move this file to the app\'92s project directory, replacing the existing file of the same name.\
+\cf0 \
+Build and launch the app, and it should now use your new font.\
+\
+Note that the font is never decompressed into memory, but is interpreted in its compressed form by the code that uses it.\
+\
+For more information about the compressed font format, see the file \'93Compressed Bitmap Font (CBF) Definition\'94.}

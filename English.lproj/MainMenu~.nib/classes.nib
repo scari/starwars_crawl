@@ -1,0 +1,67 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {display = id; }; 
+            CLASS = ImageWindowDelegate; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = NSTextFieldWithFocusDetection; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextField; 
+        }, 
+        {
+            CLASS = NSTextViewWithFocusDetection; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSTextView; 
+        }, 
+        {
+            ACTIONS = {
+                chooseFramesDestinationFolder = id; 
+                handleDisclaimerAgreed = id; 
+                handleGoStopButton = id; 
+                handleOpen = id; 
+                handleRedo = id; 
+                handleSave = id; 
+                handleSaveAs = id; 
+                handleUndo = id; 
+                setFrameRate = id; 
+                setScreenSize = id; 
+            }; 
+            CLASS = StarWarsTSGController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                ChooseButton = NSButton; 
+                ColorBar1 = NSImageView; 
+                ColorBar2 = NSImageView; 
+                ControlWindow = NSWindow; 
+                CrawlField = NSTextView; 
+                DestinationField = NSTextField; 
+                DisclaimerWindow = NSWindow; 
+                DistInfoField = NSTextField; 
+                DistributorField = NSTextField; 
+                ErrorMessage = NSTextField; 
+                FilmCoField = NSTextField; 
+                FilmCoIncField = NSTextField; 
+                FrameRateField = NSTextField; 
+                FrameRateRadioButtons = NSMatrix; 
+                GoButton = NSButton; 
+                HeightField = NSTextField; 
+                HeightUsedField = NSTextField; 
+                ImageWindow = NSWindow; 
+                IntroField = NSTextView; 
+                ProgressBar = NSProgressIndicator; 
+                ScreenSizeRadioButtons = NSMatrix; 
+                StatusText = NSTextField; 
+                TabView = NSTabView; 
+                TheImageView = NSImageView; 
+                TitleField = NSTextField; 
+                WidthField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

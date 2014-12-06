@@ -1,0 +1,31 @@
+File Format of Compressed Bitmap Font
+=====================================
+
+
+Notes:
+* Numbers in the left column are byte counts.
+* All multibyte values are little-endian.
+* This format is never decompressed; it is designed to be reasonably fast to use in its compressed form.
+
+
+FILE:
+4       glyph height (HEI)
+4       highest supported Unicode character + 1 (N)
+4*N     file-relative offsets to glyphs; 0 = unused
+--      glyphs
+
+
+GLYPH:
+4       glyph width
+4*HEI   file-relative offsets to rows
+--      rows
+
+
+ROW:
+--      one or more chunks (until glyph width is reached)
+
+
+CHUNK:
+1       fill bytes (if 255, remaining chunk data will be absent) (fill value resets to 0 at start of row, and can be only 0 or 255)
+1       raw count (RAW) (if 0, fill value flips from 0 to 255 or vice-versa)
+RAW     raw bytes (last byte’s hi-bit determines the new fill value: 0 or 255)
